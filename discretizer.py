@@ -51,13 +51,3 @@ class Discretizer:
 
         return discrete_matrix
 
-image_path = "Test2.bmp"  
-
-discretizer = Discretizer(cell_size=12)
-
-maze_image = discretizer.read_image(image_path)
-
-discrete_maze = discretizer.discretize(maze_image)
-
-for row in discrete_maze:
-    print(" ".join(map(str, row)))
