@@ -1,5 +1,5 @@
 # LABORATORIO 5 - Inteligencia Artificial
-## Resolución de Laberintos con Búsqueda en Anchura
+## Resolución de Laberintos con Búsqueda de Grafos
 
 * [Enlace al repositorio](https://github.com/FabianKel/LAB5-IA)
 
@@ -13,7 +13,7 @@
 
 ## Descripción
 
-Este laboratorio implementa un algoritmo de búsqueda en anchura (BFS) para resolver laberintos representados como imágenes. El programa convierte la imagen en una representación discreta, resuelve el laberinto y visualiza la solución.
+Este laboratorio implementa varios algoritmos de búsqueda para resolver laberintos representados como imágenes. El programa convierte la imagen en una representación discreta, resuelve el laberinto y visualiza la solución.
 
 ## Requisitos
 
@@ -69,6 +69,10 @@ El programa leerá la imagen, la discretizará, resolverá el laberinto utilizan
 ![alt text](readme_files/image-2.png)
 
 </center>
+
+### Descripción de los algortimos de búsqueda implementados:
+1. **Breadth First Search (BFS):** Este algoritmo busca encontrar el algoritmo más corto sin pesos. Es decir, aplica el principio de FIFO para encontrar el camino más corto (en términos de números de pasos) y finaliza cuando encuentra la meta por primera vez.
+2. **Depth First Search (DFS):** A diferencia de BFS, el Depth First Search explora el laberinto priorizando la exploración de un solo camino hasta el final antes de retroceder y probar otro, realmente no garantiza que sea el modelo más corto. 
 
 ### Elección de heurísticas
 
