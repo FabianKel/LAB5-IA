@@ -38,16 +38,35 @@ def draw_solution(image, path, cell_size):
         cv2.rectangle(image, (y, x), (y + cell_size, x + cell_size), (255, 0, 255), -1) 
     return image
 
+def select_image():
+    default_images = {
+        "1": "Test.bmp",
+        "2": "Test2.bmp",
+        "3": "turing.bmp",
+        "4": "Prueba Lab1.bmp",
+        "5": "Otra (ingresar ruta manualmente)"
+    }
+
+    print("Seleccione una imagen de laberinto:")
+    for key, name in default_images.items():
+        print(f"{key}. {name}")
+
+    while True:
+        choice = input("Ingrese el número de la opción: ").strip()
+        if choice in default_images:
+            if choice == "5":
+                return input("Ingrese la ruta de la imagen: ").strip()
+            return default_images[choice]
+        print("Opción no válida. Intente nuevamente.")
+
 def main():
-    image_path = input("Por favor, ingrese la ruta de la imagen (Ej : Test2.bmp): ")
+    image_path = select_image()
     cell_size = 12
 
     discretizer = Discretizer(cell_size)
     print(f"Leyendo la imagen desde: {image_path}")
-    discretizer = Discretizer(cell_size=12)
 
     maze_image = discretizer.read_image(image_path)
-
     discrete_maze = discretizer.discretize(maze_image)
 
     for row in discrete_maze:
@@ -81,5 +100,5 @@ def main():
     else:
         print("No se encontró solución.")
 
-
-main()
+if __name__ == "__main__":
+    main()
