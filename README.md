@@ -1,7 +1,10 @@
 # LABORATORIO 5 - Inteligencia Artificial
 ## Resolución de Laberintos con Búsqueda en Anchura
 
-[Enlace al repositorio](https://github.com/FabianKel/LAB5-IA)
+* [Enlace al repositorio](https://github.com/FabianKel/LAB5-IA)
+
+* [Enlace al video de demostración](https://youtu.be/8rNEJRqAU8Q)
+
 
 ## Integrantes del equipo
 - [Mónica Salvatierra - 22249](https://github.com/alee2602)
@@ -25,7 +28,7 @@ Para ejecutar el programa, utiliza el siguiente comando en la terminal:
 ```bash
 python main.py
 ```
-Luego, se solicitará ingresar la ruta de la imagen del laberinto (Ej: Test2.bmp).
+Luego, se solicitará ingresar número de la imagen del laberinto.
 El programa leerá la imagen, la discretizará, resolverá el laberinto utilizando BFS y mostrará la solución gráficamente.
 
 ## Funcionamiento
@@ -74,3 +77,26 @@ Las dos heurísticas empleadas para realizar el Graph-Search fueron:
 1. **Heurística de Manhattan (A-star):** La heurística de Manhattan es adecuada en entornos donde el movimiento está restringido a desplazamientos en líneas rectas, es decir, únicamente en direcciones horizontales y verticales dentro de una cuadrícula. Su cálculo se basa en la suma de las distancias absolutas entre las coordenadas de origen y destino, lo que proporciona una estimación eficiente y sin sobreestimar la distancia real al objetivo. Esta característica la hace ideal para hallar caminos con con estructuras regulares, ya que permite que el algoritmo A* tome decisiones bien fundamentadas sin desviarse hacia caminos innecesarios.
 
 2. **Heuristica Eucladiana (A-star):**  Es una opción apropiada en escenarios donde el movimiento no está restringido a ejes ortogonales y es posible desplazarse en cualquier dirección, incluyendo diagonales. Su cálculo se basa en la distancia en línea recta entre dos puntos, lo que ofrece una estimación más precisa en entornos con mayor libertad de movimiento. Aunque podría no ser tan eficiente como la heurística de Manhattan, en aquellos donde los desplazamientos diagonales están permitidos, proporciona una mejor aproximación de la distancia real y contribuye a una exploración más informada del espacio de búsqueda.
+
+### Ejecución del laberinto  [turing.bmp](/turing.bmp):
+
+Para la ejecución de este laberinto es necesario disminuír el tamaño de las celdas, es decir disminunir el tamaño los pasos para evitar saltos en los bordes. Para ello se puede cambiar la línea 84 del archivo [main.py](/main.py) de la siguiente manera:
+
+*Antes*: 
+```python
+    cell_size = 12
+```
+
+*Después*: 
+```python
+    cell_size = 1
+```
+
+
+
+
+
+
+
+
+
