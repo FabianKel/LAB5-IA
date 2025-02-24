@@ -1,5 +1,5 @@
 # LABORATORIO 5 - Inteligencia Artificial
-# Proyecto: Resolución de Laberintos con Búsqueda en Anchura
+## Resolución de Laberintos con Búsqueda en Anchura
 
 [Enlace al repositorio](https://github.com/FabianKel/LAB5-IA)
 
