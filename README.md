@@ -66,3 +66,11 @@ El programa leerá la imagen, la discretizará, resolverá el laberinto utilizan
 ![alt text](readme_files/image-2.png)
 
 </center>
+
+### Elección de heurísticas
+
+Las dos heurísticas empleadas para realizar el Graph-Search fueron:
+
+1. **Heurística de Manhattan (A-star):** La heurística de Manhattan es adecuada en entornos donde el movimiento está restringido a desplazamientos en líneas rectas, es decir, únicamente en direcciones horizontales y verticales dentro de una cuadrícula. Su cálculo se basa en la suma de las distancias absolutas entre las coordenadas de origen y destino, lo que proporciona una estimación eficiente y sin sobreestimar la distancia real al objetivo. Esta característica la hace ideal para hallar caminos con con estructuras regulares, ya que permite que el algoritmo A* tome decisiones bien fundamentadas sin desviarse hacia caminos innecesarios.
+
+2. **Heuristica Eucladiana (A-star):**  Es una opción apropiada en escenarios donde el movimiento no está restringido a ejes ortogonales y es posible desplazarse en cualquier dirección, incluyendo diagonales. Su cálculo se basa en la distancia en línea recta entre dos puntos, lo que ofrece una estimación más precisa en entornos con mayor libertad de movimiento. Aunque podría no ser tan eficiente como la heurística de Manhattan, en aquellos donde los desplazamientos diagonales están permitidos, proporciona una mejor aproximación de la distancia real y contribuye a una exploración más informada del espacio de búsqueda.

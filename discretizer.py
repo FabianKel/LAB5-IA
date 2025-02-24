@@ -1,3 +1,5 @@
+#Task 1.1 Discretización de la imagen
+
 import cv2
 import numpy as np
 

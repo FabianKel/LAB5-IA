@@ -1,6 +1,8 @@
+# Task 1.2 Frameworks de Problemas
 # framework.py
+
 from abc import ABC, abstractmethod
-from typing import List, Tuple, Set
+from typing import List
 import numpy as np
 from dataclasses import dataclass
 import heapq
@@ -103,19 +105,21 @@ class MazeProblem(Problem):
 
     def step_cost(self, state: State, action: str, next_state: State) -> float:
         return 1.0
+    
+# Task 1.3 Graph-Search
 
     def heuristic(self, state: State, heuristic_type: str = "manhattan") -> float:
         if heuristic_type == "manhattan":
             # Distancia Manhattan al objetivo más cercano
             return min(abs(state.x - goal.x) + abs(state.y - goal.y) 
-                      for goal in self.goal_positions)
+                    for goal in self.goal_positions)
         elif heuristic_type == "euclidean":
             # Distancia Euclidiana al objetivo más cercano
             return min(((state.x - goal.x) ** 2 + (state.y - goal.y) ** 2) ** 0.5 
-                      for goal in self.goal_positions)
+                    for goal in self.goal_positions)
         else:
             raise ValueError(f"Tipo de heurística no válido: {heuristic_type}")
-
+        
 def graph_search(problem: Problem, strategy: str, heuristic_type: str = "manhattan"):
     """Implementación genérica de búsqueda en grafos."""
     
